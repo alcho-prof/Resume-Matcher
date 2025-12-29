@@ -1,0 +1,170 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #3b82f6;
+    /* Modern Blue */
+    --secondary-color: #6366f1;
+    /* Indigo */
+    --accent-color: #10b981;
+    /* Emerald for strong matches */
+    --bg-dark: #0f172a;
+    /* Slate 900 */
+    --bg-card: #1e293b;
+    /* Slate 800 */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+html,
+body,
+[class*="st-"] {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.025em;
+}
+
+h1 {
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0.5rem;
+}
+
+/* App Background */
+.stApp {
+    background-color: var(--bg-dark);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.15) 0px, transparent 50%);
+    background-attachment: fixed;
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: #111827;
+    /* Darker than main */
+    border-right: 1px solid var(--border-color);
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: var(--text-primary) !important;
+}
+
+/* Custom Cards */
+div.css-1r6slb0,
+.card-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Text Inputs */
+.stTextInput>div>div>input,
+.stTextArea>div>div>textarea {
+    background-color: #020617;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+.stTextInput>div>div>input:focus,
+.stTextArea>div>div>textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* File Uploader */
+[data-testid="stFileUploader"] {
+    background-color: var(--bg-card);
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+[data-testid="stFileUploader"] section {
+    background-color: transparent;
+}
+
+/* Buttons */
+.stButton>button {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: var(--shadow-md);
+    width: 100%;
+}
+
+.stButton>button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+    opacity: 0.95;
+    color: white;
+}
+
+/* Result Cards CSS (Used in Python Markdown) */
+.result-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result-card:hover {
+    border-color: var(--primary-color);
+}
+
+.score-badge {
+    background: rgba(16, 185, 129, 0.1);
+    color: #34d399;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.file-name {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+/* Progress Bar */
+.stProgress>div>div>div>div {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+/* Divider */
+hr {
+    border-color: var(--border-color);
+    opacity: 0.5;
+}
